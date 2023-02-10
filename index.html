@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Acme&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="js/script.js"></script>
+
+    <title>WatchParty</title>
+  </head>
+  <body>
+    <div id="landing-page">
+      <h1 id="logo">Watch<span>Party</span></h1>
+      <h1 id="title">Watching Videos Together is <span>simple</span></h1>
+      <div id="buttons">
+        <button id="create-form-button">Create Room</button>
+        <button id="join-form-button">Join Room</button>
+      </div>
+    </div>
+
+    <div id="create-room-page">
+      <h1 id="logo">Watch<span>Party</span></h1>
+      <h1 id="title">Create your Watch<span>Room</span></h1>
+      <form id="create-room-form">
+        <h2 id="create-warning"></h2>
+        <input
+          type="text"
+          name="username"
+          id="creator-username"
+          placeholder="input your username"
+          required
+        />
+        <input
+          type="text"
+          name="roomname"
+          id="roomname"
+          placeholder="input your roomname"
+          required
+        />
+        <input
+          type="url"
+          name="youtube-link"
+          id="youtube-link"
+          placeholder="enter your Youtube URL here"
+        />
+      </form>
+      <button id="create-room-button">Create</button>
+      <button id="go-back-button">Go back</button>
+    </div>
+
+    <div id="join-room-page">
+      <h1 id="logo">Watch<span>Party</span></h1>
+      <h1 id="title">Join one Watch<span>Room</span></h1>
+      <form id="join-room-form">
+        <h2 id="join-warning"></h2>
+        <input
+          type="text"
+          name="username"
+          id="join-username"
+          placeholder="input your username"
+          required
+        />
+        <input
+          type="text"
+          name="roomcode"
+          id="roomcode"
+          placeholder="input a roomcode"
+          required
+        />
+      </form>
+      <button id="join-room-button">Join</button>
+      <button id="go-back-button">Go back</button>
+    </div>
+
+    <div id="room-page">
+      <header class="header">
+        <h1>WatchParty</h1>
+        <div>
+          <h2>Youtube Link</h2>
+          <div class="search-bar">
+            <input
+              type="text"
+              name="current-youtube-link"
+              id="current-youtube-link"
+            />
+            <div id="play-video">
+              <button id="btn-search" type="submit">
+                <img src="assets/playyoutube.png" alt="play video" />
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="room-code-text">
+          <h2>Your Room Code</h2>
+          <input name="room-code-text" id="room-code-text" readonly />
+          <h2 id="copied-to-clipboard"></h2>
+        </div>
+        <a class="leave-room" href="index.html">
+          <h2>Leave the Room</h2>
+          <img src="assets/leaveroom.png" alt="Leave the WatchRoom" />
+        </a>
+      </header>
+
+      <main>
+        <iframe
+          src=""
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; web-share"
+          allowfullscreen
+        ></iframe>
+      </main>
+    </div>
+  </body>
+</html>

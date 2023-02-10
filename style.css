@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #1a1924;
+
+  font-family: "Acme", sans-serif;
+  color: white;
+}
+
+#landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10% auto;
+  width: 80%;
+
+  gap: 30px;
+}
+
+#create-room-page {
+  flex-direction: column;
+  align-items: center;
+  margin: 10% auto;
+  width: 80%;
+
+  gap: 30px;
+
+  display: none;
+}
+
+#join-room-page {
+  flex-direction: column;
+  align-items: center;
+  margin: 10% auto;
+  width: 80%;
+
+  gap: 30px;
+
+  display: none;
+}
+
+#room-page {
+  display: none;
+  padding: 30px 5%;
+}
+
+#room-page .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#room-page h2 {
+  font-size: 15px;
+  color: white;
+}
+
+#room-page .search-bar {
+  display: flex;
+}
+
+#room-page input {
+  width: 500px;
+  height: 45px;
+  padding: 15px;
+}
+
+#room-page #room-code-text {
+  border: none;
+  width: 100px;
+  text-align: center;
+  font-family: "Acme", sans-serif;
+  font-size: 25px;
+  background-color: #07847e;
+  color: white;
+
+  cursor: pointer;
+}
+
+#btn-search {
+  all: unset;
+  width: 45px;
+  height: 100%;
+  background-color: #07847e;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#btn-search:hover,
+#room-page #room-code-text:hover {
+  background-color: #07847ec7;
+}
+
+#btn-search img {
+  height: 35px;
+  width: 35px;
+}
+
+#room-page main {
+  display: flex;
+  gap: 20px;
+
+  margin-top: 50px;
+
+  height: 700px;
+}
+
+#room-page a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#room-page .leave-room img {
+  width: 45px;
+  height: 45px;
+}
+
+#room-page iframe {
+  height: 700px;
+
+  flex-grow: 5;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+#room-page main {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 56.25%;
+}
+
+#create-room-form,
+#join-room-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#create-room-form input,
+#join-room-form input {
+  background-color: #0a0a0f;
+  color: white;
+
+  border-radius: 5px;
+  width: 20rem;
+
+  font-family: "Acme", sans-serif;
+  font-size: 1.1rem;
+
+  border: 1px solid #07847ec7;
+  padding: 10px 15px;
+}
+
+input:focus {
+  outline: none;
+}
+
+#logo,
+header h1 {
+  text-transform: uppercase;
+}
+
+#title {
+  font-weight: bolder;
+  font-size: 50px;
+
+  color: white;
+}
+
+span {
+  color: #07847e;
+}
+
+#buttons {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+
+  width: 100%;
+
+  margin-top: 150px;
+}
+
+button {
+  cursor: pointer;
+}
+
+#create-warning,
+#join-warning {
+  height: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#create-form-button,
+#join-form-button,
+#create-room-button,
+#join-room-button,
+#go-back-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30%;
+  height: 70px;
+  background-color: #07847e;
+  border-radius: 20px;
+  color: white;
+
+  font-weight: bold;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+#create-form-button:hover,
+#join-form-button:hover,
+#create-room-button:hover,
+#join-room-button:hover,
+#go-back-button:hover {
+  background-color: #07847ec7;
+}
+
+.room-code-text {
+  position: relative;
+}
+
+#copied-to-clipboard {
+  width: 150px;
+  position: absolute;
+  bottom: -30px;
+  left: -8px;
+}
