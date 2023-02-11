@@ -174,14 +174,32 @@ document.addEventListener("click", function (event) {
     createPage.style.display = "none";
     landingPage.style.display = "flex";
   }
-
-  if (event.target.type == "submit") {
-    console.log(document.querySelector("#current-youtube-link").value);
-  }
 });
 
-playNewYouTubeVideo.addEventListener("click", () => {
-  getEmbedLink(document.querySelector("#current-youtube-link").value);
+playNewYouTubeVideo.addEventListener("click", async () => {
+  await getEmbedLink(document.querySelector("#current-youtube-link").value);
+
+  var myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/json");
+
+  var raw = JSON.stringify({
+    roomCode: document.querySelector("#room-code-text").value,
+    videoURL: document.querySelector("#current-youtube-link").value,
+  });
+
+  var requestOptions = {
+    method: "PUT",
+    headers: myHeaders,
+    body: raw,
+    redirect: "follow",
+  };
+
+  try {
+    fetch("http://localhost:3333/updatevideo", requestOptions);
+  } catch (error) {
+    console.log(error);
+  }
+
 });
 
 const showTextCopiedToClipboard = document
